@@ -1,6 +1,6 @@
 class Talent < ApplicationRecord
   belongs_to :category
-  has_many :users
+  belongs_to :user
 
   validates :talent_proposed, presence: true
   validates :description, presence: true
