@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+  <div id="banner">
+    <div class="banner-content">
+      <h2>Meet a Talent.</h2>
+      <h3>Passionate people sharing their experience around a drink.</h3>
+      <form action="<%= talents_path %>" class="navbar-form navbar-left" role="search">
+        <input type="text" name="query" class="form-control" placeholder="Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+</body>
