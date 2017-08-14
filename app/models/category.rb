@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
   has_many :talents
 
-  validates :name
+  validates :name, presence: true
 end
