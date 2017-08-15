@@ -6,17 +6,11 @@
       <h2>their experience around a drink.</h2>
       <form action="<%= talents_path %>" class="navbar-form navbar-left" role="search">
         <input type="text" name="query" class="form-control" placeholder="Search">
-        <div class="dropdown-menu">
-        <input type="text" name="category" class="dropdown" placeholder="Select a category">
-          <ul class="dropdown-menu categories">
-            <li><p>ART</p></li>
-            <li><p>GAME</p></li>
-            <li><p>JOB</p></li>
-            <li><p>MUSIC</p></li>
-            <li><p>SCHOOL</p></li>
-            <li><p>SPORT</p></li>
-          </ul>
-        </div>
+        <select type="text" name="category" class="form-control" placeholder="Select a category">
+          <% @categories.each do |category| %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+          <% end %>
+        </select>
         <button type="submit" class="btn btn-primary">Search</button>
       </form>
     </div>

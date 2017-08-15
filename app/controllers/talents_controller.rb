@@ -1,5 +1,5 @@
 class TalentsController < ApplicationController
-create/new
+
 
   def new
     @talent = Talent.new
@@ -28,6 +28,7 @@ create/new
     else
       render 'edit'
     end
+  end
 
   def index
     @talents = Talent.where("talent_proposed ilike ?", "%#{params[:query]}%")
