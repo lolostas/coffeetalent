@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   resources :talents, only: [:create, :new, :update, :edit, :index, :show]
 
+  resources :conversations do
+    resources :messages
+  end
+
   root to: 'pages#home'
 end
