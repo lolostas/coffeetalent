@@ -16,6 +16,12 @@ class TalentsController < ApplicationController
     end
   end
 
+  def show
+    @talent = Talent.find(params[:id])
+    @talent.user = current_user
+    @category = Category.new
+  end
+
   def edit
     @talent = Talent.find(params[:id])
   end

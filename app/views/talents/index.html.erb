@@ -14,7 +14,7 @@
             <p><%= icon("user-o") %> <%= talent.user.first_name %></p>
             <p><%= icon("map-marker") %> <%= talent.user.address %></p>
           </div>
-          <a href="" class="btn btn-primary see_more">See more</a>
+          <%= link_to "See more", talent_path(talent), class: "btn btn-primary see_more" %>
         </div>
       </div>
     <% end -%>

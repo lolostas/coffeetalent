@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,
+    controllers: {omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :talents, only: [:create, :new, :update, :edit]
+  resources :talents, only: [:create, :new, :update, :edit, :index, :show]
 
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :talents, only: [:index]
-
 end
