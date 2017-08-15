@@ -5,10 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook]
 
+  has_many :talents
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
   validates :birthday, presence: true
+
+  acts_as_messageable
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
@@ -29,6 +33,10 @@ class User < ApplicationRecord
     end
 
     return user
+  end
+
+  def name
+    "#{first_name} #{last_name}"
   end
 end
 
