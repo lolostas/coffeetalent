@@ -13,3 +13,15 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+
+.card {
+  i.fa-check {
+    color: $green;
+  }
+
+  i.fa-times {
+    color: $red;
+  }
+}
