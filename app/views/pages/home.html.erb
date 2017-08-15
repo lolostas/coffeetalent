@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+  <div id="banner">
+    <div class="banner-content">
+      <h1>Meet a Talent.</h1>
+      <h2>Passionate people sharing</h2>
+      <h2>their experience around a drink.</h2>
+      <form action="<%= talents_path %>" class="navbar-form navbar-left" role="search">
+        <input type="text" name="query" class="form-control" placeholder="Search">
+        <select type="text" name="category" class="form-control" placeholder="Select a category">
+          <% @categories.each do |category| %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+          <% end %>
+        </select>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+</body>

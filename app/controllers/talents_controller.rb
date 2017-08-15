@@ -1,5 +1,6 @@
 class TalentsController < ApplicationController
 
+
   def new
     @talent = Talent.new
   end

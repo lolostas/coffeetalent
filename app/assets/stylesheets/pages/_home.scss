@@ -1,1 +1,46 @@
 // Specific CSS for your home-page
+#banner {
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.4) 20%), image-url("talent.png");
+  background-size: cover;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  color: white;
+  text-align: left;
+  width: 50%;
+}
+
+.btn-primary {
+  height: 60px;
+  width: 100px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main;
+  height:60px;
+  border-radius: 4px;
+}
+
+.form-control {
+  height:60px;
+
+}
+
+.banner-content h1 {
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.banner-content h2 {
+  font-size: 36px;
+  font-weight: thin;
+}
+
+
