@@ -10,10 +10,8 @@
       <div class="card-description">
         <p><%= icon("user-o") %> <%= @talent.user.first_name %></p>
         <p><%= icon("map-marker") %> <%= @talent.user.address %></p>
-        <p><%= icon("star") %> <%= @talent.description %></p>
-        <p><%= icon("book") %> Teach :  <%= @talent.lesson ? icon("check") : icon("times") %></p>
-
       </div>
-      <a href="" class="btn btn-primary see_more">See more</a>
     </div>
 </div>
+
+<%= render 'form' %>
