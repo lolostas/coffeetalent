@@ -18,6 +18,7 @@ class TalentsController < ApplicationController
 
   def show
     @talent = Talent.find(params[:id])
+    @recipient = @talent.user
     @talent.user = current_user
     @category = Category.new
   end
