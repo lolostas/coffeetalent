@@ -10,7 +10,7 @@ class TalentsController < ApplicationController
     @talent.user = current_user
 
     if @talent.save
-      redirect_to talent_path
+      redirect_to profile_path
     else
       render 'new'
     end
@@ -44,6 +44,6 @@ class TalentsController < ApplicationController
   private
 
   def talent_params
-    params.require(:talent).permit(:talent_proposed, :description)
+    params.require(:talent).permit(:category_id, :talent_proposed, :description)
   end
 end

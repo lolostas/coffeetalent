@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8">
-     <title>Show your talent to the community</title>
+    <div class="col-sm-offset-3 col-sm-6">
+     <h2>Show your talent to the community</h2>
       <BR>
-      <%= simple_form_for(@talent) do |f| %>
+        <%= simple_form_for(@talent) do |f| %>
+        <%= f.association :category %>
         <%= f.input :talent_proposed, label:'What is your talent ?', placeholder: '' %>
-        <%= f.input :description, label: 'Describe your talent and how you want to share it ?', placeholder: 'I have been practicing chess for 5 years and I am a huge fan of this game. I would like to meet you and/or give you few lessons.' %>
+        <%= f.input :description, label: 'Describe your talent and how you want to share it ?', placeholder: 'Short description with the following information : how may year of experience are you practicing your talent.' %>
         <%= f.input :meeting, as: :boolean, checked_value: true, unchecked_value: false, placeholder: 'true or false', label: 'Would you like to give lessons?' %>
-        <%= f.input :meeting, as: :boolean, checked_value: true, unchecked_value: false, placeholder: 'true or false', label: 'I would love to meet someone interested on my talent' %>
       <BR>
         <%= f.button :submit %>
       <% end %>
