@@ -10,6 +10,8 @@ class User < ApplicationRecord
   validates :address, presence: true
   validates :birthday, presence: true
 
+  acts_as_messageable
+
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
@@ -29,6 +31,10 @@ class User < ApplicationRecord
     end
 
     return user
+  end
+
+  def name
+    "#{first_name} #{last_name}"
   end
 end
 
