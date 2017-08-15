@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook]
 
+  has_many :talents
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
