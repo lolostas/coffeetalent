@@ -14,6 +14,25 @@
         <p><%= icon("book") %> Teach :  <%= @talent.lesson ? icon("check") : icon("times") %></p>
 
       </div>
-      <a href="" class="btn btn-primary see_more">See more</a>
+      <a href="" class="btn btn-primary see_more">Contact</a>
     </div>
+
+    <h1>New conversation </h1>
+    <%= form_tag conversations_path, method: :post do %>
+
+    <div>
+      <%= hidden_field_tag :user_id, @recipient.id %>
+    </div>
+
+    <div>
+      <%= text_field_tag :subject, nil, placeholder: "subject" %>
+    </div>
+
+    <div>
+      <%= text_area_tag :body, nil, placeholder: "Leave a comment" %>
+    </div>
+
+    <%= submit_tag "Contact #{@recipient.first_name}" %>
+  <% end %>
+
 </div>
