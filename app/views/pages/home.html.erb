@@ -4,9 +4,10 @@
       <h1>Meet a Talent.</h1>
       <h2>Passionate people sharing</h2>
       <h2>their experience around a drink.</h2>
-      <form action="<%= talents_path %>" class="navbar-form navbar-left" role="search">
-        <input type="text" name="query" class="form-control" placeholder="Search">
-        <select type="text" name="category" class="form-control" placeholder="Select a category">
+      <br>
+      <form action="<%= talents_path %>" class="flex-form navbar-left" role="search" style="padding-left: 0px">
+        <input type="text" name="query" class="form-control" id="home-search" placeholder="Search">
+        <select type="text" name="category" id="home-categories" class="form-control" placeholder="Select a category">
           <% @categories.each do |category| %>
             <option value="<%= category.id %>"><%= category.name %></option>
           <% end %>
