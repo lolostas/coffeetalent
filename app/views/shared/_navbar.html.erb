@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "coffee.png" %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -10,6 +10,11 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+     <p><%= link_to 'Home', root_path %></p>
+      <div class="logotitle">
+        <%= image_tag '', class: "img_logo" %>
+        <h2>1 CAFÉ 1 TALENT.</h2>
+      </div>
 
       <%= link_to "PostTalent", new_talent_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", conversations_path, class: "navbar-wagon-item navbar-wagon-link" %>
