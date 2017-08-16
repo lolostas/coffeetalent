@@ -30,5 +30,8 @@
           <%= f.button :submit, value: "Contact #{@recipient.first_name}" %>
         <% end %>
     </div>
+    <div>
+      <%= link_to 'Edit', edit_talent_path(@talent)%>
+    </div>
   </div>
 </div>
