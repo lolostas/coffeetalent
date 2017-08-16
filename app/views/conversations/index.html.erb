@@ -1,9 +1,17 @@
-<h1>All conversations</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>All conversations</h3>
 
-<% @conversations.each do |conversation| %>
-  <div>
-    <%= link_to conversation.subject, conversation_path(conversation) %>
+      <% @conversations.each do |conversation| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to conversation.subject, conversation_path(conversation) %>
+
+      <% end %>
+
+      <%= link_to "New conversation", new_conversation_path %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
 
-<%= link_to "New conversation", new_conversation_path %>
