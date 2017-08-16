@@ -23,12 +23,11 @@ class TalentsController < ApplicationController
   end
 
   def edit
-    @talent = Talent.find(params[:id])
+    @talent = current_user.talents.find(params[:id])
   end
 
   def update
-    @talent = Talent.find(params[:id])
-    @talent.user = current_user
+    @talent = current_user.talents.find(params[:id])
     if @talent.update(talent_params)
       redirect_to talent_path
     else
