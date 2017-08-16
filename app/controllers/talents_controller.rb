@@ -19,7 +19,6 @@ class TalentsController < ApplicationController
   def show
     @talent = Talent.find(params[:id])
     @recipient = @talent.user
-    @talent.user = current_user
     @category = Category.new
   end
 
@@ -38,7 +37,16 @@ class TalentsController < ApplicationController
   end
 
   def index
-    @talents = Talent.where("talent_proposed ilike ?", "%#{params[:query]}%")
+    @talents = Talent.all
+
+    if params[:category_id].present?
+      category = Category.find(params[:category_id])
+      @talents = @talents.where(category: category)
+    end
+
+    if params[:query].present?
+      @talents = @talents.where("talent_proposed ilike ?", "%#{params[:query]}%")
+    end
   end
 
   private

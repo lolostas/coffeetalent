@@ -6,7 +6,8 @@
       <h2>their experience around a drink.</h2>
       <form action="<%= talents_path %>" class="navbar-form navbar-left" role="search">
         <input type="text" name="query" class="form-control" placeholder="Search">
-        <select type="text" name="category" class="form-control" placeholder="Select a category">
+        <select type="text" name="category_id" class="form-control" placeholder="Select a category">
+          <option value="">All</option>
           <% @categories.each do |category| %>
             <option value="<%= category.id %>"><%= category.name %></option>
           <% end %>
