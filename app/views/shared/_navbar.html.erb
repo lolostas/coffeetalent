@@ -1,24 +1,25 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "coffee.png" %>
-  <% end %>
 
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "coffee.png" %>
+      <h2>1CAFÉ1TALENT</h2>
+    <% end %>
+
+<!--   <div class="logotitle">
+    <h2>1CAFÉ1TALENT</h2>
+  </div> -->
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-     <p><%= link_to 'Home', root_path %></p>
-      <div class="logotitle">
-        <%= image_tag '', class: "img_logo" %>
-        <h2>1 CAFÉ 1 TALENT.</h2>
-      </div>
 
+      <div>
       <%= link_to "PostTalent", new_talent_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", conversations_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
+      </div>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -27,11 +28,11 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to profile_path do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Talent Profile") %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Your Profile") %>
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to root_path do %>
                 <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
               <% end %>
             </li>
