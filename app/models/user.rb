@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: [:facebook]
   has_attachment :photo
   has_many :talents
+  has_many :appointments
 
   validates :first_name, presence: true
   validates :last_name, presence: true
