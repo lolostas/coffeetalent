@@ -1,18 +1,22 @@
-<div class="col-xs-12 col-sm-4">
-    <div class="card">
-      <div class="card-header">
-        <h3><%= @talent.talent_proposed.capitalize %></h3>
-        <p><%= @talent.category.name.capitalize %> </p>
-      </div>
-      <div class="card-image" style="background-image:
-      url('https://lorempixel.com/300/300?random}')">
+<div class="container">
+  <div class="row">
+    <div class="card edit_talent" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+      <div class="card-category"><h2><%= @talent.talent_proposed.capitalize %></h2>
       </div>
       <div class="card-description">
-        <p><%= icon("user-o") %> <%= @talent.user.first_name %></p>
-        <h6
-        ><%= icon("map-marker") %> <%= @talent.user.address %></h6>
+        <p><%= @talent.category.name.capitalize %></p>
+        <p><%= @talent.user.first_name %></p>
+        <p><%= icon("map-marker") %> <%= @talent.user.address %> </p>
+
       </div>
+      <%= image_tag 'https://lorempixel.com/400/400?random}', class: "avatar-large edit_avatar_talent" %>
+      <a class="card-link" href="#" ></a>
     </div>
+  </div>
 </div>
 
-<%= render 'form' %>
+<h2 class= "text-center"> <%=  icon("pencil")  %> Edit your talent !</h2>
+
+        <%= render 'form' %>
+
+
