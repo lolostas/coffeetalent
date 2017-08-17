@@ -10,7 +10,7 @@
           <%= image_tag 'https://lorempixel.com/400/400?random}', class: "avatar-large" %>
           <div class="card-description">
             <h4><%= icon("user-o") %> <%= talent.user.first_name %></h4>
-            <h8><%= icon("map-marker") %> <%= talent.user.address %></h8>
+            <h6><%= icon("map-marker") %> <%= talent.user.address %></h6>
           </div>
           <%= link_to "See more", talent_path(talent), class: "btn btn-primary see_more" %>
         </div>
