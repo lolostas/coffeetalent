@@ -1,20 +1,142 @@
 <body>
   <div id="banner">
     <div class="banner-content">
-      <h1>Meet a Talent.</h1>
-      <h2>Passionate people sharing</h2>
-      <h2>their experience around a drink.</h2>
-      <br>
-      <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
-        <input type="text" name="query" class="form-control" placeholder="Search">
-        <select type="text" name="category_id" class="form-control" placeholder="Select a category">
-          <option value="">All</option>
-          <% @categories.each do |category| %>
-            <option value="<%= category.id %>"><%= category.name %></option>
-          <% end %>
-        </select>
-        <button type="submit" class="btn btn-primary">Let's go!</button>
-      </form>
+      <div class=col-xs-12>
+        <h1>Meet a Talent.</h1>
+        <h2>Passionate people sharing</h2>
+        <h2>their experience around a drink.</h2>
+        <br>
+        <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
+          <input type="text" name="query" class="form-control" placeholder="Search">
+          <select type="text" name="category_id" class="form-control" placeholder="Select a category">
+            <option value="">All</option>
+            <% @categories.each do |category| %>
+              <option value="<%= category.id %>"><%= category.name %></option>
+            <% end %>
+          </select>
+          <button type="submit" class="btn btn-primary btn-lg">Let's go!</button>
+        </form>
+      </div>
     </div>
   </div>
+
+<BR>
+    <div class="wrapper-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="feature">
+              <%= image_tag("curious.png")%>
+              <h3>You are curious about a specific topic</h3>
+              <p>Find the talent you would like to meet !</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="feature">
+              <%= image_tag("find.png")%>
+              <h3>You want to feel the mood (moon)</h3>
+              <p>Contact him or her, it's easy !</p>
+            </div>
+          </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="feature">
+              <%= image_tag("fixrdv.png")%>
+              <h3>Chop Chop, fix an appointment.</h3>
+              <p>Click on the 'Meeting fixed' button and don't be late !</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="wrapper-cards">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "lessons.jpg" %>');">
+              <div class="card-description">
+                <h2>Lesson</h2>
+              </div>
+              <img class="card-user avatar" src="images/seb.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "sport.jpg" %>');">
+              <div class="card-description">
+                <h2>Sport</h2>
+              </div>
+              <img class="card-user avatar" src="images/anne.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "game.jpg" %>');">
+              <div class="card-description">
+                <h2>Game</h2>
+              </div>
+              <img class="card-user avatar" src="curious.png">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "art.jpg" %>');">
+              <div class="card-description">
+                <h2>Art</h2>
+              </div>
+              <img class="card-user avatar" src="images/seb.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "music.jpg" %>');">
+              <div class="card-description">
+                <h2>Music</h2>
+              </div>
+              <img class="card-user avatar" src="images/anne.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "job.jpg" %>');">
+              <div class="card-description">
+                <h2>Job</h2>
+              </div>
+              <img class="card-user avatar" src="images/romain.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "language.jpg" %>');">
+              <div class="card-description">
+                <h2>Language</h2>
+              </div>
+              <img class="card-user avatar" src="images/seb.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "circus.jpg" %>');">
+              <div class="card-description">
+                <h2>Circus</h2>
+              </div>
+              <img class="card-user avatar" src="images/anne.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "technology.jpg" %>');">
+              <div class="card-description">
+                <h2>Technology</h2>
+              </div>
+              <img class="card-user avatar" src="images/romain.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+      </div>
+    </div>
 </body>
