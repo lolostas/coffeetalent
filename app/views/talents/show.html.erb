@@ -32,9 +32,9 @@
       <div class="card show_height">
         <h3>Start the conversation</h3>
           <%= simple_form_for(:conversation, url: :conversations) do |f| %>
-            <%= f.input :subject %>
+            <%= f.input :Title %>
             <%= f.input :user_id, input_html: { value: @recipient.id }, as: :hidden %>
-            <%= f.input :body, as: :text %>
+            <%= f.input :Message, as: :text %>
             <%= f.button :submit, value: "Contact #{@recipient.first_name}" %>
           <% end %>
       </div>
