@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817102402) do
+ActiveRecord::Schema.define(version: 20170817170624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "date"
+    t.string   "location"
+    t.integer  "destinator_id"
+    t.integer  "creator_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["creator_id"], name: "index_appointments_on_creator_id", using: :btree
+    t.index ["destinator_id"], name: "index_appointments_on_destinator_id", using: :btree
+  end
 
   create_table "attachinary_files", force: :cascade do |t|
     t.string   "attachinariable_type"
@@ -139,6 +150,8 @@ ActiveRecord::Schema.define(version: 20170817102402) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "appointments", "users", column: "creator_id"
+  add_foreign_key "appointments", "users", column: "destinator_id"
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
   add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
   add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"

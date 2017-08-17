@@ -11,5 +11,9 @@ mount Attachinary::Engine => "/attachinary"
     resources :messages
   end
 
+  resources :users do
+    resources :appointments, only: :create
+  end
+
   root to: 'pages#home'
 end
