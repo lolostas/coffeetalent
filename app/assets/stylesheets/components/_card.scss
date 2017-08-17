@@ -52,3 +52,59 @@
 .show_height {
   height: 500px;
 }
+
+.edit_talent{
+  height: 200px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+.card-user .edit_talent{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.card-category .edit_talent{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-description .edit_talent{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description .edit_talent h2 {
+  font-size: 24px;
+}
+.card-description .edit_talent p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.card-link .edit_talent{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover .edit_talent {
+  opacity: 0.1;
+}
+
+.edit_avatar_talent {
+  position: absolute;
+  top: 25px;
+  bottom: 120px;
+  right: 50px;
+}
