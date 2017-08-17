@@ -55,88 +55,17 @@
     <div class="wrapper-cards">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "lessons.jpg" %>');">
-              <div class="card-description">
-                <h2>Lesson</h2>
+          <% @categories.each do |category| %>
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "#{category.name.downcase}.jpg" %>');">
+                <div class="card-description">
+                  <h2><%= category.name %></h2>
+                </div>
+                <%= link_to '', talents_path(category_id: category.id), class: "card-link" %>
               </div>
-              <img class="card-user avatar" src="images/seb.jpg">
-              <a class="card-link" href="#" ></a>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "sport.jpg" %>');">
-              <div class="card-description">
-                <h2>Sport</h2>
-              </div>
-              <img class="card-user avatar" src="images/anne.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "game.jpg" %>');">
-              <div class="card-description">
-                <h2>Game</h2>
-              </div>
-              <img class="card-user avatar" src="curious.png">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "art.jpg" %>');">
-              <div class="card-description">
-                <h2>Art</h2>
-              </div>
-              <img class="card-user avatar" src="images/seb.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "music.jpg" %>');">
-              <div class="card-description">
-                <h2>Music</h2>
-              </div>
-              <img class="card-user avatar" src="images/anne.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "job.jpg" %>');">
-              <div class="card-description">
-                <h2>Job</h2>
-              </div>
-              <img class="card-user avatar" src="images/romain.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "language.jpg" %>');">
-              <div class="card-description">
-                <h2>Language</h2>
-              </div>
-              <img class="card-user avatar" src="images/seb.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "circus.jpg" %>');">
-              <div class="card-description">
-                <h2>Circus</h2>
-              </div>
-              <img class="card-user avatar" src="images/anne.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "technology.jpg" %>');">
-              <div class="card-description">
-                <h2>Technology</h2>
-              </div>
-              <img class="card-user avatar" src="images/romain.jpg">
-              <a class="card-link" href="#" ></a>
-            </div>
-          </div>
+          <% end %>
+        </div>
       </div>
     </div>
 </body>
