@@ -1,16 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h3>All conversations</h3>
+    <div class="col-md-6 .col-md-offset-3">
+      <h3 class="center">All conversations</h3>
 
-      <% @conversations.each do |conversation| %>
-        <div class="col-xs-12 col-sm-4">
-          <%= link_to conversation.subject, conversation_path(conversation) %>
+      <div class="message">
+        <img src="current_user.facebook_picture_url" class="message-avatar" ="">
+          <div class="message-name"></div>
+            <% @conversations.each do |conversation| %>
 
-      <% end %>
+              <h3>  <%= link_to conversation.subject, conversation_path(conversation) %> </h3>
 
-      <%= link_to "New conversation", new_conversation_path %>
+            <% end %>
+          </div>
+        </div>
       </div>
+      <BR>
+      <button type="button" class="btn btn-primary btn-lg active"<%= link_to "Find a talent ! ", talents_path %> </button>
+
+
     </div>
   </div>
 </div>
