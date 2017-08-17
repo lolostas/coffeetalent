@@ -1,21 +1,28 @@
-<div class="text-center">
-  <h1> <%= icon("user-o") %> Dear <%= current_user.first_name %> , your talent profil : </h1>
 
 
-  <div class="container">
-    <div class="row">
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12">
+        <div class="profile-header">
+          <div>
+            <h3><%= icon("user-o") %> Profil name : <%= current_user.name.capitalize %> </h3>
+            <h5><%= icon("map-marker") %> <%= current_user.address %> </h5>
+          </div>
+          <%= image_tag "https://lorempixel.com/100/150?random", class: "avatar-large" %>
+        </div>
+      </div>
+
       <% @talents.each do |talent| %>
         <div class="col-xs-12 col-sm-4">
           <div class="card">
             <div class="card-header">
               <h3><%= talent.talent_proposed.capitalize %></h3>
               <p><%= talent.category.name.capitalize %> </p>
+              <p><%= talent.description %> </p>
             </div>
-            <div class="card-image" style="background-image:
-            url('https://lorempixel.com/100/150?random}')">
-            </div>
+
             <div class="card-description">
-              <p><%= icon("map-marker") %> <%= talent.user.address %></p>
             </div>
             <%= link_to "See my talent", talent_path(talent), class: "btn btn-primary see_more" %>
           </div>

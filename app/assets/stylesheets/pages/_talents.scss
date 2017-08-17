@@ -5,3 +5,18 @@
 .conversation .btn.btn-primary {
   width: 100%;
 }
+
+
+.profiles.show {
+  .profile-header {
+    border: 1px solid #dadada;
+    background-color: white;
+    background-size: cover;
+    color: #6A596A;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

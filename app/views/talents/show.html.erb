@@ -15,14 +15,9 @@
 
             <p><%= icon("book") %> Teach :  <%= @talent.lesson ? icon("check") : icon("times") %></p>
 
-            <p><%=  icon("pencil")  %> : <%=
-              if @talent.user_id == current_user.id
-                link_to 'Edit', edit_talent_path(@talent)
-              else
-                  icon("times")
-              end %>
-            </p>
-
+            <% if @talent.user == current_user %>
+              <p><%=  icon("pencil")  %> <%= link_to 'Edit', edit_talent_path(@talent) %>
+            <% end %>
           </div>
         </div>
       </div>
