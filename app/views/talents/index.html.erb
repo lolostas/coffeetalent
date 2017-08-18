@@ -7,7 +7,9 @@
             <h3><%= talent.talent_proposed.capitalize %></h3>
             <p><%= talent.category.name.capitalize %> </p>
           </div>
-          <%= image_tag 'https://lorempixel.com/400/400?random}', class: "avatar-large" %>
+          <div class="card-avatar">
+            <%= cl_image_tag image_path_for(talent.user), width: 150, heigth:150, crop: :fill %>
+          </div>
           <div class="card-description">
             <h4><%= icon("user-o") %> <%= talent.user.first_name %></h4>
             <h6><%= icon("map-marker") %> <%= talent.user.address %></h6>
