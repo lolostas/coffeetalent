@@ -8,8 +8,8 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(
       destinator: recipients.first,
       creator: recipients.last,
-      date:
-      address:
+      # date:
+      # address:
     )
     redirect_to conversation_path()
   end

@@ -17,7 +17,33 @@
       </div>
 
       <%= submit_tag "Send  your message.", class: 'btn btn-primary btn-lg' %>
-      <%= link_to "Appointment fixed", converasation_appointments_path(@conversation), class: 'btn btn-primary btn-lg', method: :post %>
     <% end %>
+
+    <BR>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Appointment fixed ?
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Your coffee</h4>
+          </div>
+          <div class="modal-body">
+            When:
+            <BR>
+            Where:
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Fix appointment</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
