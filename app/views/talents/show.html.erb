@@ -29,9 +29,9 @@
       <div class="card show_height">
         <h3>Start the conversation</h3>
           <%= simple_form_for(:conversation, url: :conversations) do |f| %>
-            <%= f.input :Title %>
+            <%= f.input :subject, label: 'Title' %>
             <%= f.input :user_id, input_html: { value: @recipient.id }, as: :hidden %>
-            <%= f.input :Message, as: :text %>
+            <%= f.input :body, as: :text, label: 'Message' %>
             <%= f.button :submit, value: "Contact #{@recipient.first_name}" %>
           <% end %>
       </div>
