@@ -37,5 +37,11 @@ class User < ApplicationRecord
   def name
     "#{first_name} #{last_name}"
   end
+
+  def unread_notifications
+    mailbox.receipts.count do |receipt|
+      receipt.is_unread?
+    end
+  end
 end
 

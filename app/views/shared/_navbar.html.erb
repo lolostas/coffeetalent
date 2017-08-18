@@ -18,7 +18,9 @@
 
       <div>
       <%= link_to "PostTalent", new_talent_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", conversations_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to conversations_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        Messages <span class="badge"><%= current_user.unread_notifications %></span>
+      <% end %>
       </div>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">

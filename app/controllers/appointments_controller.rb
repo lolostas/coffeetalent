@@ -1,13 +1,20 @@
 class AppointmentsController < ApplicationController
 
-  # POST /user/:user_id/appointments
+  # POST /conversation/:conversation_id/appointments
   def create
-    # destinator = User.find(params[:user_id])
-    # current_user
-    # @appointment = Appointment.new
+    conversation = Mailboxer::Conversation.find(params[:conversation_id])
+    recipients = conversation.recipients
+
+    @appointment = Appointment.new(
+      destinator: recipients.first,
+      creator: recipients.last,
+      date:
+      address:
+    )
+    redirect_to conversation_path()
   end
 
   # def edit
   # end
-
 end
+
