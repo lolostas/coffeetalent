@@ -17,7 +17,7 @@
       </div>
 
       <%= submit_tag "Send  your message.", class: 'btn btn-primary btn-lg' %>
-      <%= link_to "Appointment fixed ! ", user_appointments, class: 'btn btn-primary btn-lg' %>
+      <%= link_to "Appointment fixed", converasation_appointments_path(@conversation), class: 'btn btn-primary btn-lg', method: :post %>
     <% end %>
   </div>
 </div>
