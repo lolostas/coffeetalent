@@ -8,7 +8,7 @@
             <p><%= talent.category.name.capitalize %> </p>
           </div>
           <div class="card-avatar">
-            <%= cl_image_tag image_path_for(talent.user), width: 150, heigth:150, crop: :fill %>
+            <%= cl_image_tag image_path_for(talent.user), width: 150, heigth:150, crop: :crop, gravity: :face, class: "avatar" %>
           </div>
           <div class="card-description">
             <h4><%= icon("user-o") %> <%= talent.user.first_name %></h4>
