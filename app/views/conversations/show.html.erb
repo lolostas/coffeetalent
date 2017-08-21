@@ -15,8 +15,10 @@
             </div>
           <% else %>
             <div class="sent-msg-receiver">
-              <%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
-              <h3><%= receipt.message.sender.first_name %> wrote:</h3>
+              <div class="receiver-avatar">
+                <%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+                <h3><%= receipt.message.sender.first_name %> wrote:</h3>
+              </div>
               <h4><%= receipt.message.body %></h4>
             </div>
           <% end %>
