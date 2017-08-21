@@ -1,20 +1,10 @@
 <div class="container">
-  <div class="row">
+    <div class="row">
     <h1>New conversation </h1>
     <%= form_tag conversations_path, method: :post do %>
-
-      <div>
-        <%= select_tag :user_id, options_from_collection_for_select(@recipients, :id, :name) %>
-      </div>
-
-      <div>
-        <%= text_field_tag :subject, nil, placeholder: "subject" %>
-      </div>
-
-      <div>
-        <%= text_area_tag :body, nil, placeholder: "Leave a comment" %>
-      </div>
-
+      <div><%= select_tag :user_id, options_from_collection_for_select(@recipients, :id, :name) %></div>
+      <div><%= text_field_tag :subject, nil, placeholder: "subject" %></div>
+      <div><%= text_area_tag :body, nil, placeholder: "Leave a comment" %></div>
       <%= submit_tag %>
     <% end %>
   </div>
