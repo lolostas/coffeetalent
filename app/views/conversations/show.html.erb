@@ -1,31 +1,47 @@
 <div class="container">
   <div class="row">
     <h1> <%= @conversation.subject %></h1>
-
-    <% @conversation.receipts_for(current_user).each do |receipt| %>
-      <div>
-      <div>
-        <%= receipt.message.sender.name %> commented:
+    <div class="col-xs-12 col-sm-8">
+      <div class="conversations">
+      <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <div class="sent-msg">
+          <% if receipt.message.sender != current_user %>
+            <div class="sent-msg-sender">
+              <div class="sender-avatar">
+                <%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+                <h3><%= receipt.message.sender.first_name %> wrote:</h3>
+              </div>
+              <h4><%= receipt.message.body %> </h4>
+            </div>
+          <% else %>
+            <div class="sent-msg-receiver">
+              <%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+              <h3><%= receipt.message.sender.first_name %> wrote:</h3>
+              <h4><%= receipt.message.body %></h4>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
       </div>
-      <p> <%= receipt.message.body %> </p>
+    </div>
+    <div class="col-xs-12 col-sm-8" id="new_message">
+      <div class="new_conversation">
+        <h3> Write a new message: </h3>
+        <%= form_tag conversation_messages_path(@conversation), method: :post do %>
+
+          <%= text_area_tag :body %>
+          <div class="text-right">
+            <%= submit_tag "Send", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-
-    <%= form_tag conversation_messages_path(@conversation), method: :post do %>
-      <div>
-        <%= text_area_tag :body %>
-      </div>
-
-      <%= submit_tag "Send  your message.", class: 'btn btn-primary btn-lg' %>
-    <% end %>
-
     <BR>
-    <!-- Button trigger modal -->
+      <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Appointment fixed ?
+        Appointment fixed ?
     </button>
 
-    <!-- Modal -->
+      <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
