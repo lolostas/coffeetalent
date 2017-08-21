@@ -7,9 +7,10 @@
         <p><%= @talent.category.name.capitalize %></p>
         <p><%= @talent.user.first_name %></p>
         <p><%= icon("map-marker") %> <%= @talent.user.address %> </p>
-
       </div>
-      <%= cl_image_tag image_path_for(@talent.user), width: 100, heigth:100, crop: :fill, class: "avatar" %>
+      <div class="card-avatar-large">
+        <%= cl_image_tag image_path_for(@talent.user), width: 150, heigth:150, crop: :fill, class: "avatar" %>
+      </div>
       <a class="card-link" href="#" ></a>
     </div>
   </div>

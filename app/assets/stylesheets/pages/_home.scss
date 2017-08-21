@@ -23,8 +23,10 @@
   border-radius: 4px;
 }
 
-.form-control {
-  height:60px;
+.pages.home {
+  .form-control {
+    height:60px;
+  }
 }
 
 #home-categories {
@@ -81,4 +83,19 @@
 
 .card-description h2 {
   color: white;
+}
+
+
+.talents.index {
+  .search_bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .right-margin {
+      margin-right: 15px;
+    }
+  }
 }

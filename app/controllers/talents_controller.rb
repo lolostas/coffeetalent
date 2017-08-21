@@ -37,6 +37,9 @@ class TalentsController < ApplicationController
 
   def index
     @talents = Talent.all
+    @category = Category.find(params[:category_id])
+    @query = params[:query]
+    @categories = Category.all
 
     if params[:category_id].present?
       category = Category.find(params[:category_id])
