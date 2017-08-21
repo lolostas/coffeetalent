@@ -5,16 +5,14 @@ class AppointmentsController < ApplicationController
     conversation = Mailboxer::Conversation.find(params[:conversation_id])
     recipients = conversation.recipients
 
-    @appointment = Appointment.new(
-      destinator: recipients.first,
-      creator: recipients.last,
-      # date:
-      # address:
-    )
-    redirect_to conversation_path()
+    @appointment = Appointment.new(appointment_params)
+    @appointment.destinator = recipients.first
+    @appointment.creator = recipients.last
+    @appointment.save
+
+    redirect_to conversation_path(conversation), notice: "All good :)"
   end
 
-  # def edit
-  # end
+  private
 end
 
