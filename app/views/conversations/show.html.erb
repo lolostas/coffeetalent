@@ -7,18 +7,14 @@
         <div class="sent-msg">
           <% if receipt.message.sender != current_user %>
             <div class="sent-msg-sender">
-              <div class="sender-avatar">
-                <%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
-                <h3><%= receipt.message.sender.first_name %> wrote:</h3>
-              </div>
-              <h4><%= receipt.message.body %> </h4>
+              <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+                  <%= receipt.message.sender.first_name %>:</h3>
+              <h4><%= receipt.message.body %></h4>
             </div>
           <% else %>
             <div class="sent-msg-receiver">
-              <div class="receiver-avatar">
-                <%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
-                <h3><%= receipt.message.sender.first_name %> wrote:</h3>
-              </div>
+              <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+                  <%= receipt.message.sender.first_name %>:</h3>
               <h4><%= receipt.message.body %></h4>
             </div>
           <% end %>
