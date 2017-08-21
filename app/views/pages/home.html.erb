@@ -4,7 +4,7 @@
       <div class=col-xs-12>
         <h1>Meet a Talent.</h1>
         <h2>Passionate people sharing</h2>
-        <h2>their experience around a drink.</h2>
+        <h2>their experience over a drink.</h2>
         <br>
         <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
           <input type="text" name="query" class="form-control" placeholder="Search">
@@ -54,6 +54,7 @@
 
     <div class="wrapper-cards">
       <div class="container">
+      <h3 class="text-center">CATEGORIES 1 CAFÉ 1 TALENT :</h3>
         <div class="row">
           <% @categories.each do |category| %>
             <div class="col-xs-12 col-sm-4">
@@ -68,4 +69,4 @@
         </div>
       </div>
     </div>
-</body>
+
