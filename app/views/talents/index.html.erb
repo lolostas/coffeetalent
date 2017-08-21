@@ -2,9 +2,9 @@
   <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
           <input type="text" name="query" class="form-control right-margin" value=<%= "#{@query}" %>>
           <select type="text" name="category_id" class="form-control right-margin" value=<%= "#{@category}" %> >
-            <option value=""><%= "#{@category.name}" %></option>
+            <option value="">All</option>
             <% @categories.each do |category| %>
-              <option value="<%= category.id %>"><%= category.name %></option>
+              <option value="<%= category.id %>" <%= category.id == @category&.id ? "selected" : "" %>><%= category.name %></option>
             <% end %>
           </select>
           <button type="submit" class="btn btn-primary btn">Let's go!</button>
