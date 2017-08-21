@@ -249,14 +249,25 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   config.omniauth :facebook, ENV['FB_ID'], ENV['FB_SECRET']
+  config.omniauth :linkedin, ENV["LK_CLIENT_ID"], ENV["LK_CLIENT_SECRET"]
 
-  Devise.setup do |config|
-    config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
-      scope: 'email',
-      info_fields: 'email, first_name, last_name',
-      image_size: 'square',  # 50x50, guaranteed ratio
-      secure_image_url: true
-  end
+  # Devise.setup do |config|
+  #   config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
+  #     scope: 'email',
+  #     info_fields: 'email, first_name, last_name',
+  #     image_size: 'square',  # 50x50, guaranteed ratio
+  #     secure_image_url: true
+
+  #   config.omniauth :linked_in, ENV["LK_CLIENT_ID"], ENV["LK_CLIENT_SECRET"],
+  #     scope: 'email',
+  #     info_fields: 'email, first_name, last_name',
+  #     image_size: 'square',  # 50x50, guaranteed ratio
+  #     secure_image_url: true
+
+  #     # info_fields: 'email, first_name, last_name',
+  #     # image_size: 'square',  # 50x50, guaranteed ratio
+  #     # secure_image_url: true
+  # end
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
