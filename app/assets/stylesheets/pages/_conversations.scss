@@ -1,28 +1,32 @@
 .form-group {
 }
 
-.col-xs-12.col-sm-6 {
-  border-right: 1px solid #dadada;
-}
-
 #new_message h3 {
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 5px;
 }
 
-.new_message {
-  display: flex;
-  align-items: flex-end;
+.conversations {
+  border: 1px solid #dadada;
+  padding: 15px 15px;
+  border-radius: 5px;
+}
+
+.new_conversation {
+  border: 1px solid #dadada;
+  padding: 15px 15px;
+  border-radius: 5px;
+
+}
+
+#body {
+  height: 150px;
   width: 100%;
 }
 
 abbr {
   display: none;
-}
-
-.sent-msg {
-  width: auto;
 }
 
 .sent-msg-sender {
@@ -45,7 +49,6 @@ abbr {
   border-radius: 5px;
 }
 
-
 .sent-msg-receiver h3 {
   text-align: right;
   font-size: 18px;
@@ -63,5 +66,8 @@ abbr {
   border-radius: 5px;
 }
 
-
+.sender-avatar {
+  display: inline-block;
+  height: 35px;
+}
 
