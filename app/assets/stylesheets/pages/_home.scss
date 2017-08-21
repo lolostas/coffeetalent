@@ -103,14 +103,13 @@
   color: white;
 }
 
-
 .talents.index {
   .search_bar {
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: justify;
 
     .right-margin {
       margin-right: 15px;
@@ -118,7 +117,13 @@
   }
 }
 
+
+#search-button {
+  height: 60px;
+}
+
 .card.home-page {
   height: 200px;
 }
+
 
