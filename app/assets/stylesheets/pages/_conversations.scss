@@ -7,19 +7,6 @@
   margin-bottom: 5px;
 }
 
-.conversations {
-  border: 1px solid #dadada;
-  padding: 15px 15px;
-  border-radius: 5px;
-}
-
-.new_conversation {
-  border: 1px solid #dadada;
-  padding: 15px 15px;
-  border-radius: 5px;
-
-}
-
 #body {
   height: 150px;
   width: 100%;
@@ -41,12 +28,19 @@ abbr {
 
 .sent-msg-sender h4 {
   font-size: 20px;
-  color: #CA0C0C;
-  background-color: white;
+  color: white;
+  background-color: #CA0C0C;
   border: 1px solid #dadada;
   margin: 0 100px 0 0;
   padding: 15px 15px;
   border-radius: 5px;
+  position: relative;
+
+  .avatar {
+    position: absolute;
+    top: 15px;
+    left: -20px;
+  }
 }
 
 .sent-msg-receiver h3 {
@@ -58,16 +52,18 @@ abbr {
 
 .sent-msg-receiver h4 {
   font-size: 20px;
-  color: #CB9CF2;
-  background-color: white;
+  color: white;
+  background-color: #0A2463;
   border: 1px solid #dadada;
   margin: 0 0 0 100px;
   padding: 15px 15px;
   border-radius: 5px;
-}
+  position: relative;
 
-.sender-avatar {
-  display: inline-block;
-  height: 35px;
+  .avatar {
+    position: absolute;
+    top: 15px;
+    right: -20px;
+  }
 }
 
