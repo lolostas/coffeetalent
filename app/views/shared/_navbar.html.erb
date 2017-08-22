@@ -2,7 +2,7 @@
   <!-- Logo -->
 
     <%= link_to root_path, class: "navbar-wagon-brand" do %>
-      <i class="fa fa-coffee fa-spin fa-3x fa-fw"></i>
+      <i class="fa fa-coffee fa-3x fa-fw"></i>
 
       <h2>1CAFÉ1TALENT</h2>
     <% end %>
@@ -56,14 +56,30 @@
   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-
-        <li><a href="#">Home</a></li>
-        <li><a >Post a talent</a></li>
-        <li><a href="#">Messages</a></li>
-        <li><a href="#">Your Profile</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
+      <% if user_signed_in? %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a
+          <%= link_to "Home", root_path %>
+          </a></li>
+          <li><a
+          <%= link_to "Post a talent",  new_talent_path%>
+          </a></li>
+          <li><a
+          <%= link_to "Messages", conversations_path %>
+          </a></li>
+          <li><a
+          <%= link_to "Your profile", profile_path %>
+          </a></li>
+          <li><a
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          </a></li>
+        </ul>
+      <% else %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a
+            <%= link_to "Sign in", new_user_session_path %>
+          </a></li>
+      <% end %>
     </div>
   </div>
 </div>
