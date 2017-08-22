@@ -13,7 +13,6 @@
     border: 1px solid #dadada;
     background-color: white;
     background-size: cover;
-    color: $main;
     padding: 15px;
     margin: 15px 0;
     border-radius: 5px;
@@ -31,5 +30,10 @@
 .form-control.text.required {
     margin: 0px -5px 0px 0px;
     height: 206px;
-    width: 529px;
+    max-width: 529px;
   }
+
+.new_talent {
+  font-weight: thiner;
+}
+

@@ -4,13 +4,11 @@
       <h3 class="center">All conversations</h3>
 
       <div class="message">
-        <img src="current_user.facebook_picture_url" class="message-avatar" ="">
-          <div class="message-name"></div>
-            <% @conversations.each do |conversation| %>
+          <% @conversations.each do |conversation| %>
 
-              <h3>  <%= link_to conversation.subject, conversation_path(conversation) %> </h3>
+            <h3>  <%= link_to conversation.subject, conversation_path(conversation) %> </h3>
 
-            <% end %>
+          <% end %>
           </div>
         </div>
       </div>
