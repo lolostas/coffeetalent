@@ -24,6 +24,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'bootstrap-datepicker-rails'
 gem 'cloudinary'
+gem 'pg_search'
 
 group :development, :test do
   gem 'pry-byebug'

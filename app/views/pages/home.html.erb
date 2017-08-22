@@ -9,7 +9,7 @@
         <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
           <input type="text" name="query" class="form-control" placeholder="Search">
           <select type="text" name="category_id" class="form-control" placeholder="Select a category">
-            <option value="">All</option>
+            <option value="">All categories</option>
             <% @categories.each do |category| %>
               <option value="<%= category.id %>"><%= category.name %></option>
             <% end %>
@@ -56,6 +56,7 @@
 
     <div class="wrapper-cards">
       <div class="container">
+
       <h3 class="text-center">CATEGORIES:</h3>
         <div class="row">
           <% @categories.each do |category| %>
