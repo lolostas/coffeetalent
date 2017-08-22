@@ -3,10 +3,11 @@
   background: #F4F4F4;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 50px;
-  padding: 0px 10px;
+  padding: 0px 20px;
   color: rgba(0,0,0,0.3);
+  border-top: 1 solid #dadada;
 }
 .footer-links {
   display: flex;
@@ -24,6 +25,6 @@
   opacity: 1;
 }
 
-h1.football {
-  font-size: 1em;
+.football h1 {
+  font-size: 13px;
 }
