@@ -23,6 +23,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'cloudinary'
+gem 'pg_search'
 
 group :development, :test do
   gem 'pry-byebug'
