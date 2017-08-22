@@ -47,7 +47,8 @@ class TalentsController < ApplicationController
     end
 
     if params[:query].present?
-      @talents = @talents.where("talent_proposed ilike ?", "%#{params[:query]}%")
+#      @talents = @talents.where("talent_proposed ilike ?", "%#{params[:query]}%")
+      @talents = @talents.global_search params[:query]
     end
   end
 
