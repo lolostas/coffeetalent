@@ -6,7 +6,11 @@
   width: 100%;
 }
 
-
+.talents.index {
+  .card-avatar {
+    height: 150px;
+  }
+}
 
 .profiles.show {
   .profile-header {
@@ -37,3 +41,10 @@
   font-weight: thiner;
 }
 
+label.control-label.string.required {
+  font-weight: normal;
+}
+
+label.control-label.text.required {
+  font-weight: normal;
+}

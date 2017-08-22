@@ -1,6 +1,6 @@
 <div class="container search_bar">
   <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
-          <input type="text" name="query" class="form-control right-margin" placeholder="new search" value=<%= "#{@query}" %>>
+          <input type="text" name="query" class="form-control right-margin" placeholder="New search" value=<%= "#{@query}" %>>
           <select type="text" name="category_id" class="form-control right-margin" value=<%= "#{@category}" %> >
             <option value="">All categories</option>
             <% @categories.each do |category| %>
