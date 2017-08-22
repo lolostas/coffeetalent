@@ -21,6 +21,14 @@
   .btn-primary {
     height: 40px;
     width: 100%;
+    background-color: white;
+    color: $main;
+  }
+
+  .btn-primary:hover {
+    background-color: $main;
+    color: white;
+    font-weight: bold;
   }
 
   .card-image {

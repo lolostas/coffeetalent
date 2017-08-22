@@ -87,7 +87,10 @@
 
 .feature img {
   height: 300px;
+  width: 250px;
   border-radius: 50%;
+  border: 3px solid $main;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .feature {
