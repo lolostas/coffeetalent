@@ -11,7 +11,7 @@ mount Attachinary::Engine => "/attachinary"
     resources :messages
   end
 
-  resources :conversations, only: [] do
+  resources :conversations, only: [:show] do
     resources :appointments, only: :create
   end
 

@@ -29,7 +29,7 @@ abbr {
 .sent-msg-sender h4 {
   font-size: 20px;
   color: white;
-  background-color: #CA0C0C;
+  background-color: $main;
   border: 1px solid #dadada;
   margin: 0 100px 0 0;
   padding: 15px 15px;
@@ -52,8 +52,8 @@ abbr {
 
 .sent-msg-receiver h4 {
   font-size: 20px;
-  color: white;
-  background-color: #0A2463;
+  color: $main;
+  background-color: white;
   border: 1px solid #dadada;
   margin: 0 0 0 100px;
   padding: 15px 15px;
