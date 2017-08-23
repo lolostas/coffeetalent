@@ -68,3 +68,29 @@ h3.post {
 .talent-desciption {
   font-size: 18px;
 }
+
+.titre-discussion {
+  font-weight: bold;
+}
+
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  .card-description {
+    margin-top: 2em;
+    padding-right: 2em;
+  }
+  .avatar {
+    margin-left: 2em;
+  }
+}
+
+p#name {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+form.flex-form.navbar-left {
+  padding-top: 1.8em;
+  padding-bottom: 1.1em;
+}

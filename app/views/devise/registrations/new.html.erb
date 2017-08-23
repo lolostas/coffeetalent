@@ -11,7 +11,7 @@
           <%= f.input :password_confirmation, required: true %>
           <%= f.input :first_name, required: false %>
           <%= f.input :last_name, required: false %>
-          <%= f.input :address, required: false %>
+          <%= f.input :address, label: "City", required: false %>
           <%= f.input :birthday, required: false, as: :date, start_year: Date.today.year - 110, end_year: Date.today.year %>
           <%= f.input :photo, as: :attachinary %>
 
