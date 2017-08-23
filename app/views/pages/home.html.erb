@@ -23,30 +23,27 @@
 <BR>
     <div class="wrapper-features">
       <div class="container">
-      <h3 class="text-center">3 STEPS, SO EASY !</h3>
+      <h3 class="text-center">Skills are hard to get, let's help each other out</h3>
       <BR>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="feature">
-              <%= image_tag("curious.png")%>
-              <h3>Curious about a specific topic ?</h3>
-              <p>Type the topic!</p>
+              <div class="feature-img" style="background-image: url('<%= image_path("curious.png") %>');"></div>
+              <h3 class="steps">Search for a skill you want to learn</h3>
             </div>
           </div>
 
           <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="feature">
-              <%= image_tag("find.png")%>
-              <h3>Find the best profile to help you</h3>
-              <p>Contact him or her, it's easy !</p>
+              <div class="feature-img" style="background-image: url('<%= image_path("find.png") %>');"></div>
+              <h3 class="steps">Get in touch with someone full of passion</h3>
             </div>
           </div>
 
          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="feature">
-              <%= image_tag("fixrdv.png")%>
-              <h3>Chop Chop, fix an appointment.</h3>
-              <p>Fix a meeting and don't be late !</p>
+              <div class="feature-img" style="background-image: url('<%= image_path("fixrdv.png") %>');"></div>
+              <h3 class="steps">Meet over a drink & have a great moment</h3>
             </div>
           </div>
         </div>
@@ -57,7 +54,8 @@
     <div class="wrapper-cards">
       <div class="container">
 
-      <h3 class="text-center">CATEGORIES:</h3>
+      <h3 class="text-center">All talents one coffee away</h3>
+      <BR>
         <div class="row">
           <% @categories.each do |category| %>
             <div class="col-xs-12 col-sm-4">
@@ -73,3 +71,18 @@
       </div>
     </div>
 </body>
+
+<BR>
+<div class="container">
+  <h3 class="text-center">Relax with our coffee selection</h3>
+  <BR>
+  <BR>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <iframe width=100% height="260" src="https://www.youtube.com/embed/AXZX93zZpmc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <iframe width=100% height="260" src="https://www.youtube.com/embed/Qr5AIKRPIHo" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+</div>

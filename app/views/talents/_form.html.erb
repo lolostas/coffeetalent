@@ -1,13 +1,13 @@
 <div class="container">
-  <h3>Share your talent</h3>
-  <div class="row">
+  <div class="row center">
+    <h3 class="post center">Share your talent</h3>
     <div class="new_talent">
-      <div class="col-md-6 .col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3">
       <BR>
         <%= simple_form_for(@talent) do |f| %>
-        <%= f.association :category, label: 'Select a category:' %>
-        <%= f.input :talent_proposed, label:'Enter your talent:', placeholder: 'exemple: Piano' %>
-        <%= f.input :description, label: 'Description:', placeholder: 'Hello, I have been playing piano for 15 years and would be pleased to give some information or even some lessons. Lookinf forward to meeting you soon...' %>
+        <%= f.association :category, label: 'Select the category matching your passion', class: 'section' %>
+        <%= f.input :talent_proposed, label:'What\'s your talent?', placeholder: 'Piano' %>
+        <%= f.input :description, label: 'Introduce yourself and describe your passion to the community', placeholder: 'Hello, I have been playing piano for 15 years and would be pleased to discuss about it or even give some lessons. I\'m looking forward to meeting you soon...' %>
         <%= f.input :meeting, as: :boolean, checked_value: true, unchecked_value: false, placeholder: 'true or false', label: 'Would you like to give lessons?' %>
       <BR>
         <%= f.button :submit, value:"Join us", class: 'btn btn-primary btn-lg' %>

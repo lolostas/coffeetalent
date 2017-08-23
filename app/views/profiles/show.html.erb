@@ -1,13 +1,11 @@
-
-
-
 <div class="container">
   <div class="row">
       <div class="col-xs-12">
         <div class="profile-header">
           <div>
             <h3><%= icon("user-o") %> <%= current_user.name.capitalize %> </h3>
-            <h5><%= icon("map-marker") %> <%= current_user.address %> </h5>
+            <h5><%= current_user.address %> </h5>
+
           </div>
           <%= cl_image_tag image_path_for(current_user), width: 150, heigth:150, crop: :fill, class: "avatar" %>
         </div>
