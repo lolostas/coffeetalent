@@ -10,4 +10,8 @@ module ApplicationHelper
       image_path "chien.jpg"
     end
   end
+
+  def destinator_for(conversation)
+    (conversation.recipients - [current_user]).first
+  end
 end
