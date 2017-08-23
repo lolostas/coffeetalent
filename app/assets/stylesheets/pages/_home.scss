@@ -139,4 +139,15 @@ h3.text-center {
   font-size: 40px;
 }
 
+button.btn.btn-primary {
+    height: 40px;
+    background-color: $main;
+    color: white;
+    position: center;
 
+  .btn-primary:hover {
+    background-color: white;
+    color: $main;
+    font-weight: bold;
+  }
+}
