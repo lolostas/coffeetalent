@@ -85,12 +85,13 @@
   min-height: calc(100vh - 70px);
 }
 
-.feature img {
-  height: 300px;
-  width: 300px;
-  border-radius: 15%;
-  border: 3px solid $main;
-  box-shadow: 1px 1px 3px grey;
+.feature-img {
+  height: 230px;
+  width: 230px;
+  background-size: cover;
+  border-radius: 5%;
+  box-shadow: 3px 3px 4px #ccc;
+  margin: 0 auto;
 }
 
 .feature {
