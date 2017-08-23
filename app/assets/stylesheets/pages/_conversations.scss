@@ -69,9 +69,25 @@ abbr {
 
 .sender-avatar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 5px 0px;
+  padding: 15px 0px;
+  border-bottom: 1px solid #ddd;
+
+  .unread-messages .badge {
+    background-color: $main;
+    background-color: #3DD6D0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sender-avatar:first-child {
+  border-top: 1px solid #ddd;
 }
 
 .sender-conversation {
@@ -80,6 +96,7 @@ abbr {
   align-items: left;
   justify-content: space-between;
   padding-left: 20px;
+  flex-grow: 1;
 }
 
 .sender-conversation p {

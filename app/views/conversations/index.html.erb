@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 .col-md-offset-3">
-      <h3 class="center">All conversations</h3>
+    <div class="col-md-8 col-md-offset-2">
+      <h3 class="center">All ongoing conversations with talents</h3>
 
       <div class="message">
         <% @conversations.each do |conversation| %>
@@ -10,6 +10,9 @@
             <div class="sender-conversation">
               <p><%= destinator_for(conversation).name %></p>
               <p><%= link_to conversation.subject, conversation_path(conversation) %></p>
+            </div>
+            <div class="unread-messages">
+              <span class="badge"> <%= conversation.receipts.inbox.is_unread.count %></span>
             </div>
           </div>
         <% end %>
