@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #banner {
-  background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.4) 20%), image-url("talent.png");
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.4) 20%), image-url("talent.jpg");
   background-size: cover;
   height: calc(100vh - 70px);
   display: flex;
@@ -87,8 +87,8 @@
 
 .feature img {
   height: 300px;
-  width: 250px;
-  border-radius: 50%;
+  width: 300px;
+  border-radius: 15%;
   border: 3px solid $main;
   box-shadow: 1px 1px 3px grey;
 }
@@ -96,6 +96,10 @@
 .feature {
   text-align: center;
   margin-bottom: 4em;
+}
+
+h3.steps {
+  font-size: 24px;
 }
 
 .card-user .avatar {
@@ -127,6 +131,11 @@
 
 .card.home-page {
   height: 200px;
+}
+
+h3.text-center {
+  font-weight: bold;
+  font-size: 40px;
 }
 
 

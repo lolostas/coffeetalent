@@ -34,7 +34,10 @@
 .form-control.text.required {
     margin: 0px -5px 0px 0px;
     height: 206px;
-    max-width: 529px;
+  }
+
+  textarea#talent-desciption.form-control.text.required {
+    width: 100%;
   }
 
 .new_talent {
@@ -47,4 +50,21 @@ label.control-label.string.required {
 
 label.control-label.text.required {
   font-weight: normal;
+}
+
+label.control-label.select.optional {
+  font-weight: normal;
+}
+
+h3.post {
+  font-weight: bold;
+  text-align: center;
+}
+
+.row.center {
+  position: center;
+}
+
+.talent-desciption {
+  font-size: 18px;
 }
