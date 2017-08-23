@@ -29,7 +29,7 @@ abbr {
 .sent-msg-sender h4 {
   font-size: 20px;
   color: white;
-  background-color: $main;
+  background-color: #2F3061;
   border: 1px solid #dadada;
   margin: 0 100px 0 0;
   padding: 15px 15px;
@@ -52,7 +52,7 @@ abbr {
 
 .sent-msg-receiver h4 {
   font-size: 20px;
-  color: $main;
+  color: darken($main, 20%);
   background-color: white;
   border: 1px solid #dadada;
   margin: 0 0 0 100px;
@@ -67,3 +67,38 @@ abbr {
   }
 }
 
+.sender-avatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  border-bottom: 1px solid #ddd;
+
+  .unread-messages .badge {
+    background-color: $main;
+    background-color: #3DD6D0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sender-avatar:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.sender-conversation {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding-left: 20px;
+  flex-grow: 1;
+}
+
+.sender-conversation p {
+  margin: 0px 0px;
+}

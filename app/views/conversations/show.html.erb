@@ -8,13 +8,13 @@
           <% if receipt.message.sender != current_user %>
             <div class="sent-msg-sender">
               <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
-                  <%= receipt.message.sender.first_name %>:</h3>
+                  <%= receipt.message.sender.first_name %></h3>
               <h4><%= receipt.message.body %></h4>
             </div>
           <% else %>
             <div class="sent-msg-receiver">
               <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
-                  <%= receipt.message.sender.first_name %>:</h3>
+                  <%= receipt.message.sender.first_name %></h3>
               <h4><%= receipt.message.body %></h4>
             </div>
           <% end %>
