@@ -1,6 +1,4 @@
 class TalentsController < ApplicationController
-
-
   def new
     @talent = Talent.new
   end
@@ -36,7 +34,7 @@ class TalentsController < ApplicationController
   end
 
   def index
-    @talents = Talent.all
+    @talents = Talent.where.not(user: current_user)
     @category = Category.find(params[:category_id]) if params[:category_id].present?
     @query = params[:query]
     @categories = Category.all
