@@ -1,3 +1,7 @@
+<% content_for(:title_tag) do %>
+  Your profile Talent <%= current_user.name.capitalize %>
+<% end %>
+
 <div class="container">
   <div class="row">
       <div class="col-xs-12">
@@ -7,7 +11,9 @@
             <h5><%= current_user.address %> </h5>
 
           </div>
-          <%= cl_image_tag image_path_for(current_user), width: 120, heigth:120, crop: :fill, class: "avatar" %>
+            <%= link_to 'Add your city', edit_user_registration_path(@user) %>
+          <%= cl_image_tag image_path_for(current_user), width: 80, heigth:80, crop: :fill, class: "avatar" %>
+
         </div>
       </div>
 

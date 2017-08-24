@@ -1,3 +1,8 @@
+<% content_for(:title_tag) do %>
+  Results talents
+<% end %>
+
+
 <div class="container search_bar">
   <form action="<%= talents_path %>" class="flex-form navbar-left" role="search">
           <input type="text" name="query" class="form-control right-margin" placeholder="Search another talent" value=<%= "#{@query}" %>>
