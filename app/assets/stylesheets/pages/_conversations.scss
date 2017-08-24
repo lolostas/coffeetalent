@@ -114,3 +114,16 @@ abbr {
   justify-content: flex-start;
   flex-grow: 1;
 }
+
+#meeting-button {
+    height: 40px;
+    width: 210px;
+    background-color: white;
+    color: $main;
+}
+
+#meeting-button:hover {
+    background-color: $main;
+    color: white;
+    font-weight: bold;
+}
