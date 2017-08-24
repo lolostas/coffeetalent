@@ -1,3 +1,4 @@
+Appointment.destroy_all
 Talent.destroy_all
 Category.destroy_all
 User.destroy_all
