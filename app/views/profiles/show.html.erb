@@ -7,7 +7,9 @@
             <h5><%= current_user.address %> </h5>
 
           </div>
-          <%= cl_image_tag image_path_for(current_user), width: 120, heigth:120, crop: :fill, class: "avatar" %>
+            <%= link_to 'Add your city', edit_user_registration_path(@user) %>
+          <%= cl_image_tag image_path_for(current_user), width: 80, heigth:80, crop: :fill, class: "avatar" %>
+
         </div>
       </div>
 
