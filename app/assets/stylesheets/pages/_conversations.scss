@@ -28,9 +28,9 @@ abbr {
 
 .sent-msg-sender h4 {
   font-size: 20px;
-  color: white;
-  background-color: #648767;
-  border: 1px solid #dadada;
+  color: black;
+  background-color: $main;
+  border: 1px solid #dadad;
   margin: 0 100px 0 0;
   padding: 15px 15px;
   border-radius: 5px;
@@ -52,8 +52,8 @@ abbr {
 
 .sent-msg-receiver h4 {
   font-size: 20px;
-  color: darken($main, 20%);
-  background-color: white;
+  color: black;
+  background-color: $main;
   border: 1px solid #dadada;
   margin: 0 0 0 100px;
   padding: 15px 15px;
@@ -118,12 +118,17 @@ abbr {
 #meeting-button {
     height: 40px;
     width: 210px;
-    background-color: white;
-    color: $main;
+    background-color: $main;
+    color: white;
 }
 
 #meeting-button:hover {
-    background-color: $main;
-    color: white;
+    background-color: white;
+    color: $main;
     font-weight: bold;
+}
+
+#send-button {
+  background-color: white;
+  color: $main;
 }
