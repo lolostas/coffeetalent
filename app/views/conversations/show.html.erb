@@ -9,13 +9,13 @@
             <div class="sent-msg-sender">
               <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
                   <%= receipt.message.sender.first_name %></h3>
-              <h4><%= receipt.message.body %></h4>
+              <div class="msg-body-sender"><h4><%= receipt.message.body %></h4></div>
             </div>
           <% else %>
             <div class="sent-msg-receiver">
               <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
                   <%= receipt.message.sender.first_name %></h3>
-              <h4><%= receipt.message.body %></h4>
+              <div class="msg-body-receiver"><h4><%= receipt.message.body %></h4></div>
             </div>
           <% end %>
         </div>

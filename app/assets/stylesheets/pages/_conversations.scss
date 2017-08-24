@@ -102,3 +102,15 @@ abbr {
 .sender-conversation p {
   margin: 0px 0px;
 }
+
+.msg-body-receiver {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.msg-body-sender {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
