@@ -10,7 +10,10 @@ class AppointmentsController < ApplicationController
     @appointment.creator = recipients.last
     @appointment.save
 
-    receipt = current_user.reply_to_conversation(conversation, "Message automatique : RDV Créé.")
+    receipt = current_user.reply_to_conversation(
+      conversation,
+      "Message automatique : RDV le #{@appointment.date.strftime('%e %b %y')}, à #{@appointment.location}"
+    )
 
     redirect_to conversation_path(conversation), notice: "All good :)"
   end
