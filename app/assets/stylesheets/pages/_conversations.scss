@@ -115,13 +115,6 @@ abbr {
   flex-grow: 1;
 }
 
-#meeting-button {
-    height: 40px;
-    width: 210px;
-    background-color: $main;
-    color: white;
-}
-
 #meeting-button:hover {
     background-color: white;
     color: $main;
@@ -131,4 +124,10 @@ abbr {
 #send-button {
   background-color: white;
   color: $main;
+}
+
+.new-message-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

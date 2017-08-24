@@ -13,7 +13,7 @@
             </div>
           <% else %>
             <div class="sent-msg-receiver">
-              <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+              <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar-small" %>
                   <%= receipt.message.sender.first_name %></h3>
               <div class="msg-body-receiver"><h4><%= receipt.message.body %></h4></div>
             </div>
@@ -28,99 +28,100 @@
         <%= form_tag conversation_messages_path(@conversation), method: :post do %>
 
           <%= text_area_tag :body %>
-          <div class="text-right">
+          <div class="new-message-form">
+          <!-- Button trigger modal -->
+                  <button class="btn btn-primary btn-lg" id="meeting-button" data-toggle="modal" data-target="#myModalNorm">
+                      Meeting Scheduled !?
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
+                       aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                  <h4 class="modal-title" id="myModalLabel">
+                                      Tell us about your meeting,
+                                      When and Where will it be ?
+                                  </h4>
+
+                  <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+                  <!-- Inline CSS based on choices in "Settings" tab -->
+                        <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+                        <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+                        <div class="bootstrap-iso">
+                         <div class="container-fluid">
+                          <div class="row">
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                            <form method="post" action="<%= conversation_appointments_path(@conversation) %>">
+                             <div class="form-group">
+                             <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                              <label class="control-label requiredField" for="date">
+                               Date
+                               <span class="asteriskField">
+                                *
+                               </span>
+                              </label>
+                              <div class="input-group">
+                               <div class="input-group-addon">
+                                <i class="fa fa-calendar">
+                                </i>
+                               </div>
+                               <input class="form-control datepicker" id="date" name="appointment[date]" placeholder="MM/DD/YYYY" type="text"/>
+                              </div>
+                             </div>
+
+                             <div class="form-group ">
+                              <label class="control-label requiredField" for="text">
+                               Address
+                               <span class="asteriskField">
+                                *
+                               </span>
+                              </label>
+                              <div class="input-group">
+                               <div class="input-group-addon">
+                                <i class="fa fa-location-arrow">
+                                </i>
+                               </div>
+                               <input class="form-control" id="text" name="appointment[location]" type="text"/>
+                              </div>
+                             </div>
+                             <div class="form-group ">
+                              <label class="control-label " for="tel">
+                               Want to give your phone number?
+                              </label>
+                              <div class="input-group">
+                               <div class="input-group-addon">
+                                <i class="fa fa-phone">
+                                </i>
+                               </div>
+                               <input class="form-control" id="tel" name="appointment[tel]" type="text"/>
+                              </div>
+                             </div>
+                             <div class="form-group">
+                              <div>
+                               <button class="btn btn-primary" name="submit" type="submit">
+                                Let's go !
+                               </button>
+                              </div>
+                             </div>
+                            </div>
+                            </form>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             <%= submit_tag "Send", class: 'btn btn-primary btn-lg', id: 'send-button' %>
           </div>
         <% end %>
       </div>
     <BR>
-<!-- Button trigger modal -->
-        <button class="btn btn-primary col-md-offset-4 text-center" id="meeting-button" data-toggle="modal" data-target="#myModalNorm">
-            Meeting Scheduled !?
-        </button>
-        <!-- Modal -->
-        <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
-             aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">
-                            Tell us about your meeting,
-                            When and Where will it be ?
-                        </h4>
 
-        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-
-        <!-- Inline CSS based on choices in "Settings" tab -->
-              <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-
-              <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-              <div class="bootstrap-iso">
-               <div class="container-fluid">
-                <div class="row">
-                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <form method="post" action="<%= conversation_appointments_path(@conversation) %>">
-                   <div class="form-group">
-                   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-                    <label class="control-label requiredField" for="date">
-                     Date
-                     <span class="asteriskField">
-                      *
-                     </span>
-                    </label>
-                    <div class="input-group">
-                     <div class="input-group-addon">
-                      <i class="fa fa-calendar">
-                      </i>
-                     </div>
-                     <input class="form-control datepicker" id="date" name="appointment[date]" placeholder="MM/DD/YYYY" type="text"/>
-                    </div>
-                   </div>
-
-                   <div class="form-group ">
-                    <label class="control-label requiredField" for="text">
-                     Address
-                     <span class="asteriskField">
-                      *
-                     </span>
-                    </label>
-                    <div class="input-group">
-                     <div class="input-group-addon">
-                      <i class="fa fa-location-arrow">
-                      </i>
-                     </div>
-                     <input class="form-control" id="text" name="appointment[location]" type="text"/>
-                    </div>
-                   </div>
-                   <div class="form-group ">
-                    <label class="control-label " for="tel">
-                     Want to give your phone number?
-                    </label>
-                    <div class="input-group">
-                     <div class="input-group-addon">
-                      <i class="fa fa-phone">
-                      </i>
-                     </div>
-                     <input class="form-control" id="tel" name="appointment[tel]" type="text"/>
-                    </div>
-                   </div>
-                   <div class="form-group">
-                    <div>
-                     <button class="btn btn-primary" name="submit" type="submit">
-                      Let's go !
-                     </button>
-                    </div>
-                   </div>
-                  </div>
-                  </form>
-                 </div>
-                </div>
-               </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
   </div>
 </div>
