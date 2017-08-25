@@ -5,8 +5,8 @@ class ConversationsController < ApplicationController
 
   def show
     @conversation = current_user.mailbox.conversations.find(params[:id])
-    @conversation.receipts.inbox.each do |receipt|
-      receipt.mark_as_read
+    @conversation.receipts.each do |receipt|
+      receipt.mark_as_read if receipt.receiver == current_user
     end
     @appointment = Appointment.new
   end
