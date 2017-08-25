@@ -8,6 +8,7 @@ class ConversationsController < ApplicationController
     @conversation.receipts.each do |receipt|
       receipt.mark_as_read if receipt.receiver == current_user
     end
+    @receipts = @conversation.receipts_for(current_user).order(created_at: :asc)
     @appointment = Appointment.new
   end
 
