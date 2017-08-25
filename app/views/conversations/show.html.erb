@@ -7,7 +7,7 @@
         <div class="sent-msg">
           <% if receipt.message.sender != current_user %>
             <div class="sent-msg-sender">
-              <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar" %>
+              <h3><%= cl_image_tag image_path_for(receipt.message.sender), width: 35, heigth: 35, crop: :fill, class: "avatar-small" %>
                   <%= receipt.message.sender.first_name %></h3>
               <div class="msg-body-sender"><h4><%= receipt.message.body %></h4></div>
             </div>
