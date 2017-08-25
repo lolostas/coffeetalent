@@ -53,6 +53,6 @@ class TalentsController < ApplicationController
   private
 
   def talent_params
-    params.require(:talent).permit(:category_id, :talent_proposed, :description)
+    params.require(:talent).permit(:category_id, :talent_proposed, :description, :lesson)
   end
 end
