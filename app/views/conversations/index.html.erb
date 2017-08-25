@@ -16,7 +16,7 @@
                 <p><%= link_to conversation.subject, conversation_path(conversation) %></p>
               </div>
               <div class="unread-messages">
-                <span class="badge"> <%= conversation.receipts.inbox.is_unread.count %></span>
+                <span class="badge"> <%= conversation.receipts_for(current_user).inbox.is_unread.count %></span>
               </div>
             </div>
           <% end %>
